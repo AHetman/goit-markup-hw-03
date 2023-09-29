@@ -4,16 +4,59 @@ body {
   background-color: #ffffff;
 }
 
+p,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
 }
 
 a {
   text-decoration: none;
+  color: currentColor;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+.header-navigation {
+  align-items: center;
+  display: flex;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .header {
   background: #ffffff;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .header-logo {
@@ -24,10 +67,17 @@ a {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 .header-logo-color {
   color: #2e2f42;
+}
+
+.header-menu-list {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
 }
 
 .header-menu {
@@ -36,6 +86,7 @@ a {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding: 24px 0;
 }
 
 .header-menu:hover,
@@ -45,6 +96,12 @@ a {
 
 .address {
   font-style: normal;
+  margin-left: auto;
+}
+
+.address-info-list {
+  gap: 40px;
+  display: flex;
 }
 
 .address-info {
@@ -61,15 +118,19 @@ a {
 
 .main {
   background-color: #2e2f42;
+  padding: 188px 0;
+  text-align: center;
 }
 
 .main-title {
   color: #ffffff;
+  max-width: 496px;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 
 .main-btn {
@@ -81,6 +142,14 @@ a {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  padding: 16px 32px;
+  border-radius: 4px;
+  margin: auto;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  align-items: flex-start;
 }
 
 .main-btn:hover,
@@ -88,21 +157,29 @@ a {
   background-color: #404bbf;
 }
 .second {
+  padding: 120px 0;
 }
 .second-list {
+  display: flex;
+  gap: 24px;
 }
 .second-list-item {
+  padding-right: 24px;
+  width: calc((100% - 72px) / 4);
 }
 
 .second-list-title {
+  max-width: 264px;
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .second-list-text {
+  max-width: 264px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -111,6 +188,7 @@ a {
 
 .team {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .visible-title {
@@ -121,13 +199,22 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 .team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-list-item {
   background-color: #ffffff;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-container {
+  padding: 32px 0;
 }
 
 .team-title {
@@ -136,6 +223,8 @@ a {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-list-text {
@@ -143,12 +232,26 @@ a {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 .portfolio {
+  padding: 120px 0 120px 0;
 }
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+  margin-bottom: 8px;
 }
 .portfolio-list-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio-list-container {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .portfolio-list-title {
@@ -168,6 +271,7 @@ a {
 
 .footer {
   background-color: #2e2f42;
+  padding: 100px 0;
 }
 .header-logo-footer {
   color: #4d5ae5;
@@ -177,6 +281,9 @@ a {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 16px;
+  justify-content: center;
 }
 .footer-logo-color {
   color: #f4f4fd;
@@ -187,4 +294,5 @@ a {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  max-width: 264px;
 }
