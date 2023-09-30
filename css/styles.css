@@ -34,7 +34,7 @@ img {
 .container {
   width: 1158px;
   padding: 0 15px;
-  display: flex;
+  /* display: flex; */
   margin: 0 auto;
 }
 
@@ -217,13 +217,11 @@ img {
   display: flex;
   gap: 24px;
   flex-shrink: 0;
-  margin-bottom: 72px;
-  width: calc((100% - 72px) / 4);
 }
 
 .team-list-item {
   background-color: #ffffff;
-
+  width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   display: inline-flex;
   flex-direction: column;
